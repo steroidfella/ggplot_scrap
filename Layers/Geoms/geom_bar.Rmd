@@ -34,7 +34,7 @@ p <- eval(parse(text = z))
 
 ```{r, echo=F, comment=NA}
 writeLines(paste0(y, "  \n", z_1))
-write(c(y, z_1), "example1.r")
+write(c(y, z_1), "./geom_bar/example1.r")
 ```
 
 ```{r}
