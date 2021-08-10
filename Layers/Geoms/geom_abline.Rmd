@@ -20,7 +20,6 @@ uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)
 session <- html_session(url, user_agent(uastring))
 s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
 s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
-s
 ```
 
 ```{r example1, echo=F}
