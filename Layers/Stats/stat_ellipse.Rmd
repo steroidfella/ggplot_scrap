@@ -7,7 +7,7 @@ Creates plot from normal data ellipses computation and convert it into ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
-library(ggplot2); library(ggplot2movies)
+library(ggplot2)
 
 knitr::opts_chunk$set(
   class.output  = "bg-light"
