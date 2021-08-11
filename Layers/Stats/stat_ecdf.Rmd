@@ -7,7 +7,7 @@ Creates plot from empirical cumulative distribution computation and convert it i
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
-library(ggplot2); library(ggplot2movies)
+library(ggplot2)
 
 knitr::opts_chunk$set(
   class.output  = "bg-light"
