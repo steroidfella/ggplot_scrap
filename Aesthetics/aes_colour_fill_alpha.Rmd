@@ -1,0 +1,314 @@
+---
+title: "aes_colour_fill_alpha"
+output: html_document
+---
+
+Change the colour (colour and fill) and the opacity (alpha) of geom elements on a plot and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/aes_colour_fill_alpha.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[4]
+z <- s[6]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+y <- s[4]
+z <- s[8]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[4]
+z <- s[10]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+y <- s[4]
+z <- s[12]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+y <- s[4]
+z <- s[14]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+y <- s[4]
+z <- s[16]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+z <- s[21]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./aes_colour_fill_alpha/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+z <- s[25:26]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./aes_colour_fill_alpha/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example9, echo=F}
+y <- s[30]
+z <- s[31]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example9.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example10, echo=F}
+y <- s[30]
+z <- s[32]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example10.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example11, echo=F}
+y <- s[30]
+z <- s[33]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example11.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example12, echo=F}
+y <- s[30]
+z <- s[34]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example12.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example13, echo=F}
+y <- s[38:39]
+z <- s[40]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example13.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example14, echo=F}
+y <- s[38:39]
+z <- s[41]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example14.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example15, echo=F}
+y <- s[38:39]
+z <- s[42]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_colour_fill_alpha/example15.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example16, echo=F}
+z <- s[45]
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./aes_colour_fill_alpha/example16.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example17, echo=F}
+z_0 <- s[c(45,47)]
+z <- s[48:52]
+p <- eval(parse(text = c(z_0,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(z_0,z))
+write(c(z_0,z), "./aes_colour_fill_alpha/example17.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example18, echo=F}
+z_0 <- s[c(48:52)]
+z <- s[54]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(z_0,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(z_0,z_1))
+write(c(z_0,z_1), "./aes_colour_fill_alpha/example18.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+
+
+
+
+
+
+

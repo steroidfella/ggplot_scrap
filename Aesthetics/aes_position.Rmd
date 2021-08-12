@@ -1,0 +1,154 @@
+---
+title: "aes_position"
+output: html_document
+---
+
+Creates position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/aes_position.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[4:9]
+z <- s[10:18]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+z <- s[21]
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./aes_position/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[21]
+z <- s[23:26]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+y <- s[21]
+z <- s[29:32]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+y <- s[21]
+z <- s[33:36]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+y <- s[21]
+z <- s[37:40]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+y <- s[44:45]
+z <- s[46]
+z_1 <- paste("p <- ", z)
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example7.R")
+```
+
+```{r, eval=FALSE}
+plotly::ggplotly(p)
+```
+
+```{r, echo=FALSE}
+plotly::ggplotly(eval(parse(text = c(y,z))))
+```
+
+```{r example8, echo=F}
+y <- s[44:45]
+z <- s[48:49]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_position/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+

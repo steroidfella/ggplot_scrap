@@ -1,0 +1,279 @@
+---
+title: "aes_linetype_size_shape"
+output: html_document
+---
+
+Modify the appearance of lines and/or points. and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/aes_linetype_size_shape.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[2:3]
+z <- s[4]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+y <- s[2:3]
+z <- s[5]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[2:3]
+z <- s[10]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+z <- s[13:14]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./aes_linetype_size_shape/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+y <- s[17]
+z <- s[18]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+y <- s[17]
+z <- s[19]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+y <- s[17]
+z <- s[20:21]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+y <- s[17]
+z <- s[24]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example9, echo=F}
+y <- s[17]
+z <- s[25]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example9.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example10, echo=F}
+y <- s[17]
+z <- s[26]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example10.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example11, echo=F}
+y <- s[17]
+z <- s[27]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example11.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example12, echo=F}
+y <- s[17]
+z <- s[28]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example12.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example13, echo=F}
+y <- s[17]
+z <- s[29]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example13.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example14, echo=F}
+y <- s[32:33]
+z <- s[34:35]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example14.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example15, echo=F}
+y <- s[32:33]
+z <- s[38:39]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example15.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example16, echo=F}
+y <- s[32:33]
+z <- s[40:41]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_linetype_size_shape/example16.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+

@@ -1,0 +1,229 @@
+---
+title: "aes_group_order"
+output: html_document
+---
+
+Change the colour (colour and fill) and the opacity (alpha) of geom elements on a plot and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2);library(nlme)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/aes_group_order.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+s
+```
+
+```{r example1, echo=F}
+y <- s[3]
+z <- s[5]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+y <- s[3]
+z <- s[7]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[3]
+z <- s[9]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+y <- s[12]
+z <- s[13]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+y <- s[12]
+z <- s[14]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+y <- s[12]
+z <- s[15]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+z <- s[18:19]
+z_1 <- paste("p <- ", paste(z, collapse = '\n'))
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./aes_group_order/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+y <- s[22]
+z <- s[25]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example9, echo=F}
+y <- s[22]
+z <- s[28]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example9.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example10, echo=F}
+y <- s[31]
+z <- s[34]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example10.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example11, echo=F}
+y <- s[31]
+z <- s[37]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example11.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example12, echo=F}
+z <- s[44]
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./aes_group_order/example12.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example13, echo=F}
+y <- s[44]
+z <- s[50]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./aes_group_order/example13.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
