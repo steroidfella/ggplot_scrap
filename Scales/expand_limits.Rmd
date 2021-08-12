@@ -1,0 +1,104 @@
+---
+title: "expand_limits"
+output: html_document
+---
+
+Modify axis, legend, and plot labels and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/expand_limits.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[1]
+z <- s[2]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./expand_limits/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+y <- s[1]
+z <- s[3]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./expand_limits/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[1]
+z <- s[4]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./expand_limits/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+z <- s[6:8]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./expand_limits/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+z <- s[9:11]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./expand_limits/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+
+
