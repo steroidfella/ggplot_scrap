@@ -1,0 +1,168 @@
+---
+title: "annotation_logticks"
+output: html_document
+---
+
+Adds log tick marks with diminishing spacing to the plot and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/annotation_logticks.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[2:12]
+z <- s[14]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+y <- s[2:12]
+z <- s[15]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[2:12]
+z <- s[16]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+y <- s[2:12]
+z <- s[18:19]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+y <- s[2:12]
+z <- s[22]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+y <- s[26:30]
+z <- s[32]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+y <- s[35:38]
+z <- s[39]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+y <- s[2:12]
+z <- s[42:46]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_logticks/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+
+
+
+
+
+
+
+
