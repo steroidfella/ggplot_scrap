@@ -1,0 +1,59 @@
+---
+title: "annotation_custom"
+output: html_document
+---
+
+Creates annotation: Custom grob and convert it into ggplotly
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/annotation_custom.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[2:5]
+z <- s[8:11]
+y_1 <- paste(y, collapse = '\n')
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_1))
+write(c(y_1,z_1), "./annotation_custom/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+y <- s[2:5]
+z_0 <- s[14:17]
+z <- s[18:19]
+y_1 <- paste(y, collapse = '\n')
+z_00 <- paste(z_0, collapse = '\n')
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z_0,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y_1,z_00,z_1))
+write(c(y_1,z_00,z_1), "./annotation_custom/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
