@@ -31,7 +31,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example1.R")
+write(c(y,z_1), "./scale_gradient/example1.R")
 ```
 
 ```{r}
@@ -47,7 +47,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example2.R")
+write(c(y,z_1), "./scale_gradient/example2.R")
 ```
 
 ```{r}
@@ -63,7 +63,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example3.R")
+write(c(y,z_1), "./scale_gradient/example3.R")
 ```
 
 ```{r}
@@ -79,7 +79,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example4.R")
+write(c(y,z_1), "./scale_gradient/example4.R")
 ```
 
 ```{r}
@@ -95,7 +95,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example5.R")
+write(c(y,z_1), "./scale_gradient/example5.R")
 ```
 
 ```{r}
@@ -111,7 +111,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example6.R")
+write(c(y,z_1), "./scale_gradient/example6.R")
 ```
 
 ```{r}
@@ -127,7 +127,7 @@ p <- eval(parse(text = c(y,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(y,z_1))
-write(c(y,z_1), "./scale_discrete/example7.R")
+write(c(y,z_1), "./scale_gradient/example7.R")
 ```
 
 ```{r}
