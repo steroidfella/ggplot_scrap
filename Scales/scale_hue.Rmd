@@ -1,0 +1,309 @@
+---
+title: "scale_hue"
+output: html_document
+---
+
+Maps each level to an evenly spaced hue on the colour wheel and convert it into ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/scale_hue.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+y <- s[2:3]
+d <- eval(parse(text = y))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(y)
+write(y, "./scale_hue/example1.R")
+```
+
+```{r}
+plotly::ggplotly(d)
+```
+
+```{r example2, echo=F}
+y <- s[2:3]
+z <- s[6]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+y <- s[2:3]
+z <- s[7]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+y <- s[2:3]
+z <- s[8]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+y <- s[2:3]
+z <- s[11]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+y <- s[2:3]
+z <- s[12]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+y <- s[2:3]
+z <- s[13]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+y <- s[2:3]
+z <- s[14]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example9, echo=F}
+y <- s[2:3]
+z <- s[17]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example9.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example10, echo=F}
+y <- s[2:3]
+z <- s[17]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example10.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example11, echo=F}
+y <- s[2:3]
+z <- s[18]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example11.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example12, echo=F}
+y <- s[2:3]
+z <- s[19]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example12.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example13, echo=F}
+y <- s[2:3]
+z <- s[20]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example13.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example14, echo=F}
+y <- s[24]
+z <- s[25]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example14.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example15, echo=F}
+y <- s[24]
+z <- s[26]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example15.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example16, echo=F}
+y <- s[24]
+z <- s[27]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example16.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example17, echo=F}
+y <- s[30]
+z <- s[31:32]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example17.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example18, echo=F}
+y <- s[30]
+z <- s[33:35]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(y,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(y,z_1))
+write(c(y,z_1), "./scale_hue/example18.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
