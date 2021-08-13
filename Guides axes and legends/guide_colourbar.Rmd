@@ -1,0 +1,252 @@
+---
+title: "guide_colourbar"
+output: html_document
+---
+
+Shows continuous colour scales mapped onto values and then convert it to ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/guide_colourbar.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[8]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[9]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[10]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[15]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[18]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[21]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[24]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[27]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example9, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[30]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example9.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example10, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[33]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example10.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example11, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[36:40]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example11.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example12, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[43:45]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example12.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example13, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[46]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example13.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example14, echo=F}
+r <- s[c(1:2,4:5)]
+z <- s[48:50]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./guide_colourbar/example14.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+
+
+
+

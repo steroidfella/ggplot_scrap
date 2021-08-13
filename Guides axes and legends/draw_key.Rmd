@@ -1,0 +1,55 @@
+---
+title: "draw_key"
+output: html_document
+---
+
+Draws the key when the geom needs to be displayed in a legend and then convert it to ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/draw_key.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+r <- s[1]
+z <- s[3]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./draw_key/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+r <- s[1]
+z <- s[6]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./draw_key/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
