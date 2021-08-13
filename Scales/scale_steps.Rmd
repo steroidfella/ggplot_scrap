@@ -1,0 +1,71 @@
+---
+title: "scale_steps"
+output: html_document
+---
+
+Creates a two colour binned gradient (low-high), creates a diverging binned colour gradient (low-mid-high), and creates a n-colour binned gradient. and then convert it to ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/scale_steps.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+r <- s[1:5]
+z <- s[8:10]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./scale_steps/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+r <- s[1:5]
+z <- s[13:15]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./scale_steps/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+r <- s[1:5]
+z <- s[18:20]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./scale_steps/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
