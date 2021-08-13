@@ -182,7 +182,7 @@ plotly::ggplotly(p)
 
 ```{r example11, echo=F}
 r <- s[55:57]
-z <- s[61]
+z <- s[63]
 z_1 <- paste("p <- ", z)
 p <- eval(parse(text = c(r,z)))
 ```
