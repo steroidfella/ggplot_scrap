@@ -1,0 +1,71 @@
+---
+title: "label_bquote"
+output: html_document
+---
+
+Flexible way of labelling facet rows or columns with plotmath expressions and convert it to ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/label_bquote.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+r <- s[3]
+z <- s[4]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./label_bquote/example1.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+r <- s[3]
+z <- s[5]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./label_bquote/example2.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+r <- s[3]
+z <- s[6]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./label_bquote/example3.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
