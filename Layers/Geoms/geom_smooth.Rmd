@@ -3,7 +3,7 @@ title: "geom_smooth"
 output: html_document
 ---
 
-Creates smoothed conditional means and convert it into ggplotly
+Creates smoothed conditional means and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

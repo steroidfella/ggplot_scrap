@@ -3,7 +3,7 @@ title: "geom_crossbar"
 output: html_document
 ---
 
-Various ways of representing a vertical interval defined by `x`, `ymin` and `ymax` and convert it into ggplotly
+Various ways of representing a vertical interval defined by `x`, `ymin` and `ymax` and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

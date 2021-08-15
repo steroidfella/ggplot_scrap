@@ -3,7 +3,7 @@ title: "geom_path"
 output: html_document
 ---
 
-Connects the observations in the order in which they appear in the data and convert it into ggplotly
+Connect the observations in the order in which they appear in the data and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

@@ -3,7 +3,7 @@ title: "geom_rug"
 output: html_document
 ---
 
-Supplement a 2d display with the two 1d marginal distributions and convert it into ggplotly
+Supplement a 2d display with the two 1d marginal distributions and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

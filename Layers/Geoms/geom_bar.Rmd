@@ -2,7 +2,7 @@
 title: "Bar Charts"
 output: html_document
 ---
-How to make a bar chart in R by converting ggplot to plotly.
+Create bar chart and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

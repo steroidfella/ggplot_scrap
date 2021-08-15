@@ -3,7 +3,7 @@ title: "geom_function"
 output: html_document
 ---
 
-Computes and draws a function as a continuous curve and convert it into ggplotly
+Computes and draws a function as a continuous curve and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

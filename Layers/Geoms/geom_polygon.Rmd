@@ -3,7 +3,7 @@ title: "geom_polygon"
 output: html_document
 ---
 
-Draw polygons and convert it into ggplotly
+Draw polygons and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

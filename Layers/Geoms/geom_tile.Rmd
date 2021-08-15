@@ -3,7 +3,7 @@ title: "geom_tile"
 output: html_document
 ---
 
-Creates rectangles and convert it into ggplotly
+Creates rectangles and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

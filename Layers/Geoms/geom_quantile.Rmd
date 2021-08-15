@@ -3,7 +3,7 @@ title: "geom_quantile"
 output: html_document
 ---
 
-Fits a quantile regression to the data and draws the fitted quantiles with lines and convert it into ggplotly
+Fits a quantile regression to the data and draws the fitted quantiles with lines and then converts them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

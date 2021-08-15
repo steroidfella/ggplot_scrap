@@ -3,7 +3,7 @@ title: "geom_text"
 output: html_document
 ---
 
-Labeling plots and convert it into ggplotly
+Labeling plots and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

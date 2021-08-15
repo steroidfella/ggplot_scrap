@@ -3,7 +3,7 @@ title: "geom_density"
 output: html_document
 ---
 
-Computes and draws kernel density estimate and convert it into ggplotly
+Computes and draws kernel density estimate and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

@@ -3,7 +3,7 @@ title: "geom_contour"
 output: html_document
 ---
 
-Visualise 3D surfaces in 2D and convert it into ggplotly
+Visualise 3D surfaces in 2D and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
