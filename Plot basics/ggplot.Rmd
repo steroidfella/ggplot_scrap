@@ -3,7 +3,7 @@ title: "ggplot"
 output: html_document
 ---
 
-Initializes a ggplot object by converting into ggplotly.
+Construct ggplots and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
