@@ -3,7 +3,7 @@ title: "label_bquote"
 output: html_document
 ---
 
-Flexible way of labelling facet rows or columns with plotmath expressions and convert it to ggplotly.
+Flexible way of labelling facet rows or columns with plotmath expressions and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

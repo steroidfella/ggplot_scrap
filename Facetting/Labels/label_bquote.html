@@ -352,7 +352,7 @@ pre code {
 </div>
 
 
-<p>Flexible way of labelling facet rows or columns with plotmath expressions and convert it to ggplotly.</p>
+<p>Flexible way of labelling facet rows or columns with plotmath expressions and then convert them with ggplotly.</p>
 <pre class="bg-light"><code>p &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point()
 p &lt;-  p + facet_grid(vs ~ ., labeller = label_bquote(alpha ^ .(vs)))</code></pre>
 <pre class="r"><code>plotly::ggplotly(p)</code></pre>
