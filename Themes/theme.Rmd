@@ -1,0 +1,435 @@
+---
+title: "theme"
+output: html_document
+---
+
+Give plots a consistent customized look and then convert them with ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/theme.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+z <- s[1:3]
+p1 <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./theme/example1.R")
+```
+
+```{r}
+plotly::ggplotly(p1)
+```
+
+```{r example2, echo=F}
+r <- s[1:3]
+z <- s[7]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example2.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+r <- s[1:3]
+z <- s[8]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example3.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+r <- s[1:3]
+z <- s[12]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example4.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+r <- s[1:3]
+z <- s[13]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example5.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+r <- s[1:3]
+z <- s[14]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example6.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example7, echo=F}
+r <- s[1:3]
+z <- s[15:18]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example7.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+r <- s[1:3]
+z <- s[21:25]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example8.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example9, echo=F}
+r <- s[1:3]
+z <- s[29]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example9.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example10, echo=F}
+r <- s[1:3]
+z <- s[30]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example10.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example11, echo=F}
+r <- s[1:3]
+z <- s[31]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example11.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example12, echo=F}
+r <- s[1:3]
+z <- s[34]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example12.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example13, echo=F}
+r <- s[1:3]
+z <- s[37:41]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example13.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example14, echo=F}
+z <- s[45:52]
+p2 <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./theme/example14.R")
+```
+
+```{r}
+plotly::ggplotly(p2)
+```
+
+```{r example15, echo=F}
+r <- s[45:52]
+z <- s[56]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example15.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example16, echo=F}
+r <- s[45:52]
+z <- s[57]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example16.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example17, echo=F}
+r <- s[45:52]
+z <- s[58]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example17.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example18, echo=F}
+r <- s[45:52]
+z <- s[62:67]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example18.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example19, echo=F}
+r <- s[45:52]
+z <- s[71:74]
+z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example19.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example20, echo=F}
+r <- s[45:52]
+z <- s[78]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example20.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example21, echo=F}
+r <- s[45:52]
+z <- s[79]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example21.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example22, echo=F}
+r <- s[45:52]
+z <- s[80]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example22.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example23, echo=F}
+z <- s[84:86]
+p3 <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./theme/example23.R")
+```
+
+```{r}
+plotly::ggplotly(p3)
+```
+
+```{r example24, echo=F}
+r <- s[84:86]
+z <- s[89]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example24.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example25, echo=F}
+r <- s[84:86]
+z <- s[90]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example25.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+```{r example26, echo=F}
+r <- s[84:86]
+z <- s[91]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./theme/example26.R")
+```
+
+```{r}
+plotly::ggplotly(p)
+```
+
+
