@@ -3,7 +3,7 @@ title: "position_dodge"
 output: html_document
 ---
 
-Dodging preserves the vertical position of an geom while adjusting the horizontal position and convert it into ggplotly
+Dodging preserves the vertical position of an geom while adjusting the horizontal position and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

@@ -3,7 +3,7 @@ title: "position_jitter"
 output: html_document
 ---
 
-Adding random noise to a plot can sometimes make it easier to read and then convert it into ggplotly
+Adding random noise to a plot can sometimes make it easier to read and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
