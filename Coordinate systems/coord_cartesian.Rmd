@@ -1,0 +1,147 @@
+---
+title: "coord_cartesian"
+output: html_document
+---
+
+Setting limits on the coordinate system to zoom the plot and then convert them with ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/coord_cartesian.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+z <- s[4:6]
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./coord_cartesian/example1.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+r <- s[4:6]
+z <- s[10]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_cartesian/example2.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example3, echo=F}
+r <- s[4:6]
+z <- s[15]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_cartesian/example3.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+r <- s[4:6]
+z <- s[19]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_cartesian/example4.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+r <- s[4:6]
+z <- s[23]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_cartesian/example5.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+z <- s[26:27]
+d <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./coord_cartesian/example6.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(d)
+```
+
+```{r example7, echo=F}
+r <- s[26:27]
+z <- s[32]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_cartesian/example7.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example8, echo=F}
+r <- s[26:27]
+z <- s[36]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_cartesian/example8.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```

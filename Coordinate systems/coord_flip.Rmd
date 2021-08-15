@@ -1,0 +1,116 @@
+---
+title: "coord_flip"
+output: html_document
+---
+
+Creates Cartesian coordinates with x and y flipped and then convert them with ggplotly.
+
+```{r setup, include=FALSE}
+library(rvest);library(xml2);library(httr)
+library(ggplot2)
+
+knitr::opts_chunk$set(
+  class.output  = "bg-light"
+)
+```
+
+```{r, include=FALSE}
+url <- "https://ggplot2.tidyverse.org/reference/coord_flip.html"
+uastring <- "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+session <- html_session(url, user_agent(uastring))
+s <- html_text(html_nodes(session, xpath = "//*[@class='input']"))
+s <- unlist(strsplit(s, split = '\n', fixed = TRUE))
+```
+
+```{r example1, echo=F}
+z <- s[4:6]
+z_1 <- paste("p <- ", "\n", paste(z, collapse = '\n'))
+p <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z_1)
+write(z_1, "./coord_flip/example1.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example2, echo=F}
+z <- s[8:9]
+h <- eval(parse(text = z))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(z)
+write(z, "./coord_flip/example2.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(h)
+```
+
+```{r example3, echo=F}
+r <- s[8:9]
+z <- s[11]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_flip/example3.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example4, echo=F}
+r <- s[8:9]
+z <- s[12]
+z_1 <- paste("p <- ", z)
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_flip/example4.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example5, echo=F}
+r <- s[15]
+z <- s[16:17]
+z_1 <- paste("p <- ", "\n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_flip/example5.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
+
+```{r example6, echo=F}
+r <- s[15]
+z <- s[16:18]
+z_1 <- paste("p <- ", "\n", paste(z, collapse = '\n'))
+p <- eval(parse(text = c(r,z)))
+```
+
+```{r, echo=F, comment=NA}
+writeLines(c(r,z_1))
+write(c(r,z_1), "./coord_flip/example6.R")
+```
+
+```{r, error=T}
+plotly::ggplotly(p)
+```
