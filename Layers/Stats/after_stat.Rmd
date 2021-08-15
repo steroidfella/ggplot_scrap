@@ -3,7 +3,7 @@ title: "after_stat"
 output: html_document
 ---
 
-Map from stat transformed data, flag evaluation of mapping for after data has been scaled, map the same aesthetic multiple times but remap it for the geom, and then convert it into ggplotly
+Map from stat transformed data, flag evaluation of mapping for after data has been scaled, map the same aesthetic multiple times but remap it for the geom, and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

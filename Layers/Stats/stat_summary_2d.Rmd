@@ -3,7 +3,7 @@ title: "stat_summary_2d"
 output: html_document
 ---
 
-Bin and summarise in 2d (rectangle & hexagons) and then convert it into ggplotly
+Bin and summarise in 2d (rectangle & hexagons) and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

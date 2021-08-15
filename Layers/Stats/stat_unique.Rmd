@@ -3,7 +3,7 @@ title: "stat_unique"
 output: html_document
 ---
 
-Remove duplicates and then convert it into ggplotly
+Remove duplicates and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

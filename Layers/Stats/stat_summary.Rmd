@@ -3,7 +3,7 @@ title: "stat_summary"
 output: html_document
 ---
 
-Summarise y values at unique/binned x and then convert it into ggplotly
+Summarise y values at unique/binned x and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
