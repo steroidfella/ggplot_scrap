@@ -3,7 +3,7 @@ title: "guide_coloursteps"
 output: html_document
 ---
 
-It shows areas between breaks as a single constant colour instead of the gradient known from the colourbar counterpart and then convert it to ggplotly.
+It shows areas between breaks as a single constant colour instead of the gradient known from the colourbar counterpart and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

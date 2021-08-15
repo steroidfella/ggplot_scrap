@@ -3,7 +3,7 @@ title: "guide_axis"
 output: html_document
 ---
 
-Shows visual representation of position scales and then convert it to ggplotly.
+Shows visual representation of position scales and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

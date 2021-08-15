@@ -3,7 +3,7 @@ title: "sec_axis"
 output: html_document
 ---
 
-This function is used in conjunction with a position scale to create a secondary axis, positioned opposite of the primary axis and then convert it to ggplotly.
+This function is used in conjunction with a position scale to create a secondary axis, positioned opposite of the primary axis and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

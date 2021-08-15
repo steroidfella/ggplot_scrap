@@ -3,7 +3,7 @@ title: "guides"
 output: html_document
 ---
 
-Set guides for each scale and then convert it to ggplotly.
+Set guides for each scale and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

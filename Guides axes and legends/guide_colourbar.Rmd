@@ -3,7 +3,7 @@ title: "guide_colourbar"
 output: html_document
 ---
 
-Shows continuous colour scales mapped onto values and then convert it to ggplotly.
+Shows continuous colour scales mapped onto values and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

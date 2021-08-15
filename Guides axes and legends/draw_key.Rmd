@@ -3,7 +3,7 @@ title: "draw_key"
 output: html_document
 ---
 
-Draws the key when the geom needs to be displayed in a legend and then convert it to ggplotly.
+Draws the key when the geom needs to be displayed in a legend and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
