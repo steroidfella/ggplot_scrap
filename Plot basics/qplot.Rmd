@@ -3,7 +3,7 @@ title: "Quick plot"
 output: html_document
 ---
 
-Convenient wrapper for creating a number of different types of plots using a consistent calling scheme and convert it into ggplotly
+Convenient wrapper for creating a number of different types of plots using a consistent calling scheme and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
