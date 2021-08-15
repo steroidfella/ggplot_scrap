@@ -3,7 +3,7 @@ title: "aes_group_order"
 output: html_document
 ---
 
-Change the colour (colour and fill) and the opacity (alpha) of geom elements on a plot and convert it into ggplotly
+Define the grouping structure by mapping group to a variable that has a different value for each group and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

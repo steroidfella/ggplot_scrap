@@ -3,7 +3,7 @@ title: "aes_colour_fill_alpha"
 output: html_document
 ---
 
-Change the colour (colour and fill) and the opacity (alpha) of geom elements on a plot and convert it into ggplotly
+Change the colour (colour and fill) and the opacity (alpha) of geom elements on a plot and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

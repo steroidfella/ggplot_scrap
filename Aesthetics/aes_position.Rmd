@@ -3,7 +3,7 @@ title: "aes_position"
 output: html_document
 ---
 
-Creates position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend and convert it into ggplotly
+Creates position related aesthetics: x, y, xmin, xmax, ymin, ymax, xend, yend and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
