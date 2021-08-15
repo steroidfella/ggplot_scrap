@@ -3,7 +3,7 @@ title: "borders"
 output: html_document
 ---
 
-Quick and dirty way to get map data (from the maps package) on to plot and convert it into ggplotly
+Quick and dirty way to get map data (from the maps package) on to plot and convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

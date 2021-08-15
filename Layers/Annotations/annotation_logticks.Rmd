@@ -3,7 +3,7 @@ title: "annotation_logticks"
 output: html_document
 ---
 
-Adds log tick marks with diminishing spacing to the plot and convert it into ggplotly
+Adds log tick marks with diminishing spacing to the plot and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

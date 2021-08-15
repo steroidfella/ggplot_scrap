@@ -3,7 +3,7 @@ title: "annotate"
 output: html_document
 ---
 
-Adding small annotations (such as text labels) or data in vectors and convert it into ggplotly
+Adding small annotations (such as text labels) or data in vectors and then convert them into ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

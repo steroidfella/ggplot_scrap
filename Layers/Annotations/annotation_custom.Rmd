@@ -3,7 +3,7 @@ title: "annotation_custom"
 output: html_document
 ---
 
-Creates annotation: Custom grob and convert it into ggplotly
+Creates annotation for Custom grob and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
