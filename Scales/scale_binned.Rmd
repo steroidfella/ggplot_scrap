@@ -3,7 +3,7 @@ title: "scale_binned"
 output: html_document
 ---
 
-Transform continuous inputs before using it with a geom that requires discrete positions and convert it into ggplotly
+Transform continuous inputs before using it with a geom that requires discrete positions and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

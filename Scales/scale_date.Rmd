@@ -3,7 +3,7 @@ title: "scale_date"
 output: html_document
 ---
 
-Creates default scales for the three date/time class and convert it into ggplotly.
+Creates default scales for the three date/time class and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

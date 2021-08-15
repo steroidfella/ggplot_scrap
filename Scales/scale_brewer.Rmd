@@ -3,7 +3,7 @@ title: "scale_brewer"
 output: html_document
 ---
 
-scales provide sequential, diverging and qualitative colour schemes from ColorBrewer and convert it into ggplotly
+scales provide sequential, diverging and qualitative colour schemes from ColorBrewer and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

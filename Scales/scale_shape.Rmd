@@ -3,7 +3,7 @@ title: "scale_shape"
 output: html_document
 ---
 
-Maps discrete variables to six easily discernible shapes.
+Maps discrete variables to six easily discernible shapes and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

@@ -3,7 +3,7 @@ title: "scale_gradient"
 output: html_document
 ---
 
-Creates a two colour gradient (low-high),  creates a diverging colour gradient (low-mid-high), creates a n-colour gradient and convert it into ggplotly.
+Creates a two colour gradient (low-high),  creates a diverging colour gradient (low-mid-high), creates a n-colour gradient and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

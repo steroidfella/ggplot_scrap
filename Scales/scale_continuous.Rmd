@@ -3,7 +3,7 @@ title: "scale_continuous"
 output: html_document
 ---
 
-Position scales for continuous data (x & y) and convert it into ggplotly.
+Position scales for continuous data (x & y) and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

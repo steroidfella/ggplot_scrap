@@ -3,7 +3,7 @@ title: "scale_hue"
 output: html_document
 ---
 
-Maps each level to an evenly spaced hue on the colour wheel and convert it into ggplotly.
+Maps each level to an evenly spaced hue on the colour wheel and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

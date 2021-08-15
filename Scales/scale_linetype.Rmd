@@ -3,7 +3,7 @@ title: "scale_linetype"
 output: html_document
 ---
 
-Scale for line patterns and convert it into ggplotly.
+Scale for line patterns and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

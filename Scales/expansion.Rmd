@@ -3,7 +3,7 @@ title: "expansion"
 output: html_document
 ---
 
-Generate expansion vector for scales and convert it into ggplotly
+Generate expansion vector for scales and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)

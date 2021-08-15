@@ -3,7 +3,7 @@ title: "lims"
 output: html_document
 ---
 
-Modify axis, legend, and plot labels and convert it into ggplotly
+Modify axis, legend, and plot labels and then convert them with ggplotly
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
