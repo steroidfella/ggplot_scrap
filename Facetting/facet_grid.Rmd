@@ -3,7 +3,7 @@ title: "facet_grid"
 output: html_document
 ---
 
-Forms a matrix of panels defined by row and column faceting variables and then convert it to ggplotly.
+Forms a matrix of panels defined by row and column faceting variables and then convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
