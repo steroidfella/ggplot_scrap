@@ -1,6 +1,10 @@
 ---
 title: "ggplot"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Construct ggplots and then convert them with ggplotly
@@ -12,6 +16,8 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +44,10 @@ write(c(z_0, z_1), "./ggplot/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "ggplot_1")
+```
+
 ```{r example2, echo=F}
 z_0 <- s[3:9]
 z <- s[21:23]
@@ -54,6 +64,10 @@ write(c(z_0, z_1), "./ggplot/example2.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "ggplot_2")
+```
+
 ```{r example3, echo=F}
 z_0 <- s[3:9]
 z <- s[28:36]
@@ -68,4 +82,8 @@ write(c(z_0, z_1), "./ggplot/example3.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "ggplot_3")
 ```
