@@ -1,6 +1,10 @@
 ---
 title: "geom_point"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Create scatterplots and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +43,10 @@ write(c(y,z_1), "./geom_point/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_1")
+```
+
 ```{r example2, echo=F}
 y <- s[1]
 z <- s[5]
@@ -52,6 +61,10 @@ write(c(y,z_1), "./geom_point/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_2")
 ```
 
 ```{r example3, echo=F}
@@ -70,6 +83,10 @@ write(c(y,z_1), "./geom_point/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_3")
+```
+
 ```{r example4, echo=F}
 y <- s[1]
 z <- s[8]
@@ -86,6 +103,10 @@ write(c(y,z_1), "./geom_point/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_4")
+```
+
 ```{r example5, echo=F}
 z <- s[11]
 z_1 <- paste("p <- ", z)
@@ -99,6 +120,10 @@ write(z_1, "./geom_point/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_5")
 ```
 
 ```{r example6, echo=F}
@@ -117,6 +142,10 @@ write(c(y,z_1), "./geom_point/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_6")
+```
+
 ```{r example7, echo=F}
 y <- s[15]
 z <- s[17]
@@ -131,6 +160,10 @@ write(c(y,z_1), "./geom_point/example7.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_7")
 ```
 
 ```{r example8, echo=F}
@@ -149,6 +182,10 @@ write(c(y,z_1), "./geom_point/example8.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_8")
+```
+
 ```{r example9, echo=F}
 z <- s[24:25]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -162,6 +199,10 @@ write(z_1, "./geom_point/example9.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_9")
 ```
 
 ```{r example10, echo=F}
@@ -180,6 +221,10 @@ write(c(z_0,z_1), "./geom_point/example10.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_10")
+```
+
 ```{r example11, echo=F}
 z_0 <- s[30]
 z <- s[34:37]
@@ -194,6 +239,10 @@ write(c(z_0,z_1), "./geom_point/example11.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_11")
 ```
 
 ```{r example12, echo=F}
@@ -212,6 +261,10 @@ write(c(z_0,z_1), "./geom_point/example12.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_12")
+```
+
 ```{r example13, echo=F}
 z_0 <- s[41]
 z <- s[44:45]
@@ -221,13 +274,15 @@ p <- eval(parse(text = c(z_0,z)))
 
 ```{r, echo=F, comment=NA}
 writeLines(c(z_0,z_1))
-write(c(z_0,z_1), "./geom_point/example10.R")
+write(c(z_0,z_1), "./geom_point/example13.R")
 ```
 
 ```{r}
 plotly::ggplotly(p)
 ```
 
-
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_point_13")
+```
 
 

@@ -1,6 +1,10 @@
 ---
 title: "geom_tile"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Creates rectangles and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -37,6 +42,10 @@ write(z_1, "./geom_tile/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_a")
+```
+
 ```{r example2, echo=F}
 z <- s[8:9]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -50,6 +59,10 @@ write(z_1, "./geom_tile/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_b")
 ```
 
 ```{r example3, echo=F}
@@ -68,6 +81,10 @@ write(c(y,z_1), "./geom_tile/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_c")
+```
+
 ```{r example4, echo=F}
 y <- s[12:17]
 z <- s[20:21]
@@ -82,6 +99,10 @@ write(c(y,z_1), "./geom_tile/example4.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_d")
 ```
 
 ```{r example5, echo=F}
@@ -100,6 +121,10 @@ write(c(y,z_1), "./geom_tile/example5.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_e")
+```
+
 ```{r example6, echo=F}
 y <- s[27:28]
 z <- s[30:31]
@@ -114,6 +139,10 @@ write(c(y,z_1), "./geom_tile/example6.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_f")
 ```
 
 ```{r example7, echo=F}
@@ -132,6 +161,10 @@ write(c(y,z_1), "./geom_tile/example7.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_g")
+```
+
 ```{r example8, echo=F}
 y <- s[37]
 z <- s[38]
@@ -146,6 +179,10 @@ write(c(y,z_1), "./geom_tile/example8.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_h")
 ```
 
 ```{r example9, echo=F}
@@ -164,6 +201,10 @@ write(c(y,z_1), "./geom_tile/example9.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_i")
+```
+
 ```{r example10, echo=F}
 y <- s[37]
 z <- s[40]
@@ -178,6 +219,10 @@ write(c(y,z_1), "./geom_tile/example10.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_j")
 ```
 
 ```{r example11, echo=F}
@@ -196,6 +241,10 @@ write(c(y,z_1), "./geom_tile/example11.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_k")
+```
+
 ```{r example12, echo=F}
 y <- s[37]
 z <- s[48:53]
@@ -210,4 +259,8 @@ write(c(y,z_1), "./geom_tile/example12.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_tile_l")
 ```

@@ -1,6 +1,10 @@
 ---
 title: "geom_spoke"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Creates line segments parameterised by location, direction and distance and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +43,10 @@ write(c(y,z_1), "./geom_spoke/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_spoke_1")
+```
+
 ```{r example2, echo=F}
 y <- s[1:3]
 z <- s[9:11]
@@ -52,4 +61,8 @@ write(c(y,z_1), "./geom_spoke/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_spoke_2")
 ```

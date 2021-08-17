@@ -1,6 +1,10 @@
 ---
 title: "geom_path"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Connect the observations in the order in which they appear in the data and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -37,6 +42,10 @@ write(z_1, "./geom_path/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_1")
+```
+
 ```{r example2, echo=F}
 z <- s[3:4]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -52,6 +61,10 @@ write(z_1, "./geom_path/example2.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_2")
+```
+
 ```{r example3, echo=F}
 z <- s[7]
 z_1 <- paste("p <- ", z)
@@ -65,6 +78,10 @@ write(z_1, "./geom_path/example3.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_3")
 ```
 
 ```{r example4, echo=F}
@@ -83,6 +100,10 @@ write(c(y,z_1), "./geom_path/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_4")
+```
+
 ```{r example5, echo=F}
 y <- s[11]
 z <- s[13]
@@ -97,6 +118,10 @@ write(c(y,z_1), "./geom_path/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_5")
 ```
 
 ```{r example6, echo=F}
@@ -115,6 +140,10 @@ write(c(y,z_1), "./geom_path/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_6")
+```
+
 ```{r example7, echo=F}
 y <- s[17]
 z <- s[19]
@@ -131,6 +160,10 @@ write(c(y,z_1), "./geom_path/example7.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_7")
+```
+
 ```{r example8, echo=F}
 z <- s[22:23]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -144,6 +177,10 @@ write(z_1, "./geom_path/example8.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_8")
 ```
 
 ```{r example9, echo=F}
@@ -162,6 +199,10 @@ write(c(y,z_1), "./geom_path/example9.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_9")
+```
+
 ```{r example10, echo=F}
 y <- s[27]
 z <- s[29:31]
@@ -176,6 +217,10 @@ write(c(y,z_1), "./geom_path/example10.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_10")
 ```
 
 ```{r example11, echo=F}
@@ -195,6 +240,10 @@ write(c(y,z_0,z_1), "./geom_path/example11.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_11")
+```
+
 ```{r example12, echo=F}
 y <- s[34]
 z_0 <- s[35]
@@ -210,6 +259,10 @@ write(c(y,z_0,z_1), "./geom_path/example12.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_12")
 ```
 
 ```{r example13, echo=F}
@@ -229,6 +282,10 @@ write(c(y,z_0,z_1), "./geom_path/example13.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_13")
+```
+
 ```{r example14, echo=F}
 y <- s[41]
 z <- s[42]
@@ -243,6 +300,10 @@ write(c(y,z_1), "./geom_path/example14.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_14")
 ```
 
 ```{r example15, echo=F}
@@ -262,6 +323,10 @@ write(c(y,z_0,z_1), "./geom_path/example15.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_15")
+```
+
 ```{r example16, echo=F}
 y <- s[48:54]
 z_0 <- s[55]
@@ -277,6 +342,10 @@ write(c(y,z_0,z_1), "./geom_path/example16.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_16")
 ```
 
 ```{r example17, echo=F}
@@ -296,6 +365,10 @@ write(c(y,z_0,z_1), "./geom_path/example17.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_17")
+```
+
 ```{r example18, echo=F}
 y <- s[48:54]
 z_0 <- s[55]
@@ -313,7 +386,9 @@ write(c(y,z_0,z_1), "./geom_path/example18.R")
 plotly::ggplotly(p)
 ```
 
-
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_path_18")
+```
 
 
 

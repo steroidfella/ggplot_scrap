@@ -1,6 +1,10 @@
 ---
 title: "geom_smooth"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Creates smoothed conditional means and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -37,6 +42,10 @@ write(z_1, "./geom_smooth/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_1")
+```
+
 ```{r example2, echo=F}
 z <- s[6:8]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -50,6 +59,10 @@ write(z_1, "./geom_smooth/example2.R")
 
 ```{r, error=T}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_2")
 ```
 
 ```{r example3, echo=F}
@@ -67,6 +80,10 @@ write(z_1, "./geom_smooth/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_3")
+```
+
 ```{r example4, echo=F}
 z <- s[18:20]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -76,6 +93,10 @@ p <- eval(parse(text = z))
 ```{r, echo=F, comment=NA}
 writeLines(z_1)
 write(z_1, "./geom_smooth/example4.R")
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_4")
 ```
 
 ```{r}
@@ -97,6 +118,10 @@ write(z_1, "./geom_smooth/example5.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_5")
+```
+
 ```{r example6, echo=F}
 z <- s[29:31]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -112,6 +137,10 @@ write(z_1, "./geom_smooth/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_6")
+```
+
 ```{r example7, echo=F}
 z <- s[32:35]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -125,6 +154,10 @@ write(z_1, "./geom_smooth/example7.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_7")
 ```
 
 ```{r example8, echo=F}
@@ -143,6 +176,10 @@ write(c(y,z_1), "./geom_smooth/example8.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_8")
+```
+
 ```{r example9, echo=F}
 y <- s[38:40]
 z <- s[47:49]
@@ -157,6 +194,10 @@ write(c(y,z_1), "./geom_smooth/example9.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_9")
 ```
 
 ```{r example10, echo=F}
@@ -175,7 +216,9 @@ write(c(y,z_1), "./geom_smooth/example10.R")
 plotly::ggplotly(p)
 ```
 
-
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_smooth_10")
+```
 
 
 

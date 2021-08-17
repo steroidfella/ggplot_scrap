@@ -1,6 +1,10 @@
 ---
 title: "geom_sf"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Creates compact display of a continuous distribution and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2);library(maps); library(sf)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -35,4 +40,8 @@ write(z_1, "./geom_sf/example1.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_sf_1")
 ```

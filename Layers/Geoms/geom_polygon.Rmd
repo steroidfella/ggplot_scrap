@@ -1,6 +1,10 @@
 ---
 title: "geom_polygon"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Draw polygons and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2); library(grid)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -39,6 +44,10 @@ write(c(y,z_0,z_1), "./geom_polygon/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_polygon_1")
+```
+
 ```{r example2, echo=F}
 y <- s[31:34]
 z_0 <- s[24:25]
@@ -57,6 +66,10 @@ write(c(y,z_01,z_1), "./geom_polygon/example2.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_polygon_2")
+```
+
 ```{r example3, echo=F}
 z <- s[41:57]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -70,4 +83,8 @@ write(z_1, "./geom_polygon/example3.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_polygon_3")
 ```

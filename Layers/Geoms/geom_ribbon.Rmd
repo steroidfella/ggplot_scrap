@@ -1,6 +1,10 @@
 ---
 title: "geom_ribbon"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 For each x value, it displays a y interval defined by ymin and ymax  and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -39,6 +44,10 @@ write(c(y,z_0,z_1), "./geom_ribbon/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_ribbon_1")
+```
+
 ```{r example2, echo=F}
 y <- s[2]
 z_0 <- s[3]
@@ -54,6 +63,10 @@ write(c(y,z_0,z_1), "./geom_ribbon/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_ribbon_2")
 ```
 
 ```{r example3, echo=F}
@@ -73,6 +86,10 @@ write(c(y,z_0,z_1), "./geom_ribbon/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_ribbon_3")
+```
+
 ```{r example4, echo=F}
 y <- s[2]
 z_0 <- s[3]
@@ -88,4 +105,8 @@ write(c(y,z_0,z_1), "./geom_ribbon/example4.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_ribbon_4")
 ```

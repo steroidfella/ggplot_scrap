@@ -1,6 +1,10 @@
 ---
 title: "geom_segment"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Draws a straight line between points in the chart and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -40,6 +45,10 @@ write(c(z_00,y,z_1), "./geom_segment/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_1")
+```
+
 ```{r example2, echo=F}
 z_0 <- s[1:2]
 y <-s[4]
@@ -56,6 +65,10 @@ write(c(z_00,y,z_1), "./geom_segment/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_2")
 ```
 
 ```{r example3, echo=F}
@@ -76,6 +89,10 @@ write(c(z_00,y,z_1), "./geom_segment/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_3")
+```
+
 ```{r example4, echo=F}
 z_0 <- s[1:2]
 y <-s[4]
@@ -94,6 +111,10 @@ write(c(z_00,y,z_1), "./geom_segment/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_4")
+```
+
 ```{r example5, echo=F}
 z <- s[17:20]
 z_1 <- paste("p <-", "  \n", paste(z, collapse = '\n'))
@@ -107,6 +128,10 @@ write(z_1, "./geom_segment/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_5")
 ```
 
 ```{r example6, echo=F}
@@ -125,6 +150,10 @@ write(c(y,z_1), "./geom_segment/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_6")
+```
+
 ```{r example7, echo=F}
 y <-s[38:39]
 z <- s[40]
@@ -141,6 +170,10 @@ write(c(y,z_1), "./geom_segment/example7.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_7")
+```
+
 ```{r example8, echo=F}
 y <-s[38:39]
 z <- s[42:43]
@@ -155,4 +188,8 @@ write(c(y,z_1), "./geom_segment/example8.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_segment_8")
 ```
