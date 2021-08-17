@@ -1,6 +1,10 @@
 ---
 title: "Bar Charts"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 Create bar chart and then convert them with ggplotly.
 
@@ -11,6 +15,8 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +44,10 @@ write(c(y, z_1), "./geom_bar/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_1")
+```
+
 ```{r example2, echo=F}
 z <- s[7]
 z_1 <- paste("p <- ", z)
@@ -51,6 +61,10 @@ write(c(y, z_1), "./geom_bar/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_2")
 ```
 
 ```{r example3, echo=F}
@@ -68,6 +82,10 @@ write(c(y, z_1), "./geom_bar/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_3")
+```
+
 ```{r example4, echo=F}
 z <- s[14]
 z_1 <- paste("p <- ", z)
@@ -83,6 +101,10 @@ write(c(y, z_1), "./geom_bar/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_4")
+```
+
 ```{r example5, echo=F}
 z <- s[18:20]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -96,6 +118,10 @@ write(c(y, z_1), "./geom_bar/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_5")
 ```
 
 ```{r example6, echo=F}
@@ -114,6 +140,10 @@ write(c(z_0, z_1), "./geom_bar/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_6")
+```
+
 ```{r example7, echo=F}
 z <- s[28:29]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -127,6 +157,10 @@ write(c(z_0, z_1), "./geom_bar/example7.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_7")
 ```
 
 ```{r example8, echo=F}
@@ -145,6 +179,10 @@ write(c(z_0, z_1), "./geom_bar/example8.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_8")
+```
+
 ```{r example9, echo=F}
 z <- s[36]
 z_1 <- paste("p <- ", z)
@@ -158,4 +196,8 @@ write(c(z_0, z_1), "./geom_bar/example9.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bar_9")
 ```

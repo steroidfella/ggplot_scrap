@@ -1,17 +1,22 @@
 ---
 title: "geom_hex"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Divides the plane into regular hexagons, counts the number of cases in each hexagon, then maps the number of cases to the hexagon fill and convert them with ggplotly.
 
 ```{r setup, include=FALSE}
 library(rvest);library(xml2);library(httr)
-library(ggplot2)
+library(ggplot2); library(hexbin)
 
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +43,10 @@ write(c(y,z_1), "./geom_hex/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_hex_1")
+```
+
 ```{r example2, echo=F}
 y <- s[1]
 z <- s[7]
@@ -52,6 +61,10 @@ write(c(y,z_1), "./geom_hex/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_hex_2")
 ```
 
 ```{r example3, echo=F}
@@ -70,6 +83,10 @@ write(c(y,z_1), "./geom_hex/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_hex_3")
+```
+
 ```{r example4, echo=F}
 y <- s[1]
 z <- s[11]
@@ -86,6 +103,10 @@ write(c(y,z_1), "./geom_hex/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_hex_4")
+```
+
 ```{r example5, echo=F}
 y <- s[1]
 z <- s[12]
@@ -100,4 +121,8 @@ write(c(y,z_1), "./geom_hex/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_hex_5")
 ```

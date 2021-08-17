@@ -1,6 +1,10 @@
 ---
 title: "ggsave"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 function for saving a plot

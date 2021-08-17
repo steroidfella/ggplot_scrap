@@ -1,6 +1,10 @@
 ---
 title: "geom_density"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Computes and draws kernel density estimate and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -37,6 +42,10 @@ write(z_1, "./geom_density/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_1")
+```
+
 ```{r example2, echo=F}
 z <- s[4:5]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -50,6 +59,10 @@ write(z_1, "./geom_density/example2.R")
 
 ```{r, error=TRUE}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=TRUE}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_density_2")
 ```
 
 ```{r example3, echo=F}
@@ -67,6 +80,10 @@ write(z_1, "./geom_density/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_3")
+```
+
 ```{r example4, echo=F}
 z <- s[9:10]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -80,6 +97,10 @@ write(z_1, "./geom_density/example4.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_4")
 ```
 
 ```{r example5, echo=F}
@@ -97,6 +118,10 @@ write(z_1, "./geom_density/example5.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_5")
+```
+
 ```{r example6, echo=F}
 z <- s[15:17]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -110,6 +135,10 @@ write(z_1, "./geom_density/example6.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_6")
 ```
 
 ```{r example7, echo=F}
@@ -127,6 +156,10 @@ write(z_1, "./geom_density/example7.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_7")
+```
+
 ```{r example8, echo=F}
 z <- s[28:29]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse='\n'))
@@ -140,6 +173,10 @@ write(z_1, "./geom_density/example8.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_8")
 ```
 
 ```{r example9, echo=F}
@@ -157,7 +194,9 @@ write(z_1, "./geom_density/example9.R")
 plotly::ggplotly(p)
 ```
 
-
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_density_9")
+```
 
 
 

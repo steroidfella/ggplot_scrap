@@ -1,6 +1,10 @@
 ---
 title: "geom_bin_2d"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Divides the plane into rectangles, counts the number of cases in each rectangle, and then (by default) maps the number of cases to the rectangle's fill and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +43,10 @@ write(c(y,z_1), "./geom_bin_2d/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bin_2d_1")
+```
+
 ```{r example2, echo=F}
 y <- s[1]
 z <- s[6]
@@ -52,6 +61,10 @@ write(c(y,z_1), "./geom_bin_2d/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bin_2d_2")
 ```
 
 ```{r example3, echo=F}
@@ -70,6 +83,10 @@ write(c(y,z_1), "./geom_bin_2d/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bin_2d_3")
+```
+
 ```{r example4, echo=F}
 y <- s[1]
 z <- s[10]
@@ -86,6 +103,8 @@ write(c(y,z_1), "./geom_bin_2d/example4.R")
 plotly::ggplotly(p)
 ```
 
-
+```{r echo=F}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_bin_2d_4")
+```
 
 

@@ -1,6 +1,10 @@
 ---
 title: "geom_histogram"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Visualise the distribution of a single continuous variable by dividing the x axis into bins and counting the number of observations in each bin and then convert them with ggplotly
@@ -12,6 +16,7 @@ library(ggplot2);library(ggplot2movies)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -37,6 +42,10 @@ write(z_1, "./geom_histogram/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_1")
+```
+
 ```{r example2, echo=F}
 z <- s[3:4]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -50,6 +59,10 @@ write(z_1, "./geom_histogram/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_2")
 ```
 
 ```{r example3, echo=F}
@@ -67,6 +80,10 @@ write(z_1, "./geom_histogram/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_3")
+```
+
 ```{r example4, echo=F}
 z <- s[8:9]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -80,6 +97,10 @@ write(z_1, "./geom_histogram/example4.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_4")
 ```
 
 ```{r example5, echo=F}
@@ -97,6 +118,10 @@ write(z_1, "./geom_histogram/example5.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_5")
+```
+
 ```{r example6, echo=F}
 z <- s[19:20]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -110,6 +135,10 @@ write(z_1, "./geom_histogram/example6.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_6")
 ```
 
 ```{r example7, echo=F}
@@ -127,6 +156,10 @@ write(z_1, "./geom_histogram/example7.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_7")
+```
+
 ```{r example8, echo=F}
 z <- s[26:27]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -140,6 +173,10 @@ write(z_1, "./geom_histogram/example8.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_8")
 ```
 
 ```{r example9, echo=F}
@@ -157,6 +194,10 @@ write(z_1, "./geom_histogram/example9.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_9")
+```
+
 ```{r example10, echo=F}
 z <- s[78:80]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -172,3 +213,6 @@ write(z_1, "./geom_histogram/example10.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_histogram_10")
+```

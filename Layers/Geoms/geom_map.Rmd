@@ -1,6 +1,10 @@
 ---
 title: "geom_map"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Create polygons from a reference map and then convert them with ggplotly
@@ -38,6 +42,10 @@ write(c(y,z_1), "./geom_map/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_map_1")
+```
+
 ```{r example2, echo=F}
 y <- s[6:19]
 z <- s[24:26]
@@ -52,6 +60,10 @@ write(c(y,z_1), "./geom_map/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_map_2")
 ```
 
 ```{r example3, echo=F}
@@ -70,6 +82,10 @@ write(c(y,z_1), "./geom_map/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_map_3")
+```
+
 ```{r example4, echo=F}
 z <- s[32:52]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -85,3 +101,6 @@ write(c(y,z_1), "./geom_map/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r echo=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_map_4")
+```

@@ -1,6 +1,10 @@
 ---
 title: "geom_crossbar"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Various ways of representing a vertical interval defined by `x`, `ymin` and `ymax` and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -39,6 +44,10 @@ write(c(y,z_0,z_1), "./geom_crossbar/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_1")
+```
+
 ```{r example2, echo=F}
 y <- s[2:8]
 z_0 <- s[10]
@@ -54,6 +63,10 @@ write(c(y,z_0,z_1), "./geom_crossbar/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_2")
 ```
 
 ```{r example3, echo=F}
@@ -73,6 +86,10 @@ write(c(y,z_0,z_1), "./geom_crossbar/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_3")
+```
+
 ```{r example4, echo=F}
 y <- s[2:8]
 z_0 <- s[10]
@@ -90,6 +107,10 @@ write(c(y,z_0,z_1), "./geom_crossbar/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_4")
+```
+
 ```{r example5, echo=F}
 y <- s[2:8]
 z <- s[17:18]
@@ -104,6 +125,10 @@ write(c(y,z_1), "./geom_crossbar/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_5")
 ```
 
 ```{r example6, echo=F}
@@ -123,6 +148,10 @@ write(c(y,z_0,z_1), "./geom_crossbar/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_6")
+```
+
 ```{r example7, echo=F}
 y <- s[2:8]
 z_0 <- s[27]
@@ -138,6 +167,10 @@ write(c(y,z_0,z_1), "./geom_crossbar/example7.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_7")
 ```
 
 ```{r example8, echo=F}
@@ -158,6 +191,10 @@ write(c(y,z_0,z_00,z_1), "./geom_crossbar/example8.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_8")
+```
+
 ```{r example9, echo=F}
 y <- s[2:8]
 z_0 <- s[27]
@@ -173,4 +210,8 @@ write(c(y,z_0,z_1), "./geom_crossbar/example9.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_crossbar_9")
 ```

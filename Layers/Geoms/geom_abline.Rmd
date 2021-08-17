@@ -1,6 +1,10 @@
 ---
 title: "geom_abline"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Add reference lines to a plot, either horizontal, vertical, or diagonal and then convert them with ggplotly.
@@ -12,6 +16,8 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +44,10 @@ write(c(y,z_1), "./geom_abline/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_1")
+```
+
 ```{r example2, echo=F}
 y <- s[1]
 z <- s[5]
@@ -52,6 +62,10 @@ write(c(y,z_1), "./geom_abline/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_2")
 ```
 
 ```{r example3, echo=F}
@@ -70,6 +84,10 @@ write(c(y,z_1), "./geom_abline/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_3")
+```
+
 ```{r example4, echo=F}
 y <- s[1]
 z <- s[8]
@@ -86,6 +104,10 @@ write(c(y,z_1), "./geom_abline/example4.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_4")
+```
+
 ```{r example5, echo=F}
 y <- s[1]
 z <- s[9]
@@ -100,6 +122,10 @@ write(c(y,z_1), "./geom_abline/example5.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_5")
 ```
 
 ```{r example6, echo=F}
@@ -119,6 +145,10 @@ write(c(y,z_0,z_1), "./geom_abline/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_6")
+```
+
 ```{r example7, echo=F}
 y <- s[1]
 z <- s[15]
@@ -133,6 +163,10 @@ write(c(y,z_1), "./geom_abline/example7.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_7")
 ```
 
 ```{r example8, echo=F}
@@ -152,6 +186,10 @@ write(c(y,z_0,z_1), "./geom_abline/example8.R")
 plotly::ggplotly(p)
 ```
 
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_8")
+```
+
 ```{r example9, echo=F}
 z_0 <- s[22]
 z <- s[26:29]
@@ -166,4 +204,8 @@ write(c(z_0,z_1), "./geom_abline/example9.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_abline_9")
 ```

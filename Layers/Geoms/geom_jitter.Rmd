@@ -1,6 +1,10 @@
 ---
 title: "geom_jitter"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Add a small amount of random variation to the location of each point and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -38,6 +43,10 @@ write(c(y,z_1), "./geom_jitter/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_1")
+```
+
 ```{r example2, echo=F}
 y <- s[1]
 z <- s[3]
@@ -52,6 +61,10 @@ write(c(y,z_1), "./geom_jitter/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_2")
 ```
 
 ```{r example3, echo=F}
@@ -70,6 +83,10 @@ write(c(y,z_1), "./geom_jitter/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_3")
+```
+
 ```{r example4, echo=F}
 y <- s[1]
 z <- s[9:10]
@@ -84,6 +101,10 @@ write(c(y,z_1), "./geom_jitter/example4.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_4")
 ```
 
 ```{r example5, echo=F}
@@ -102,6 +123,10 @@ write(c(y,z_1), "./geom_jitter/example5.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_5")
+```
+
 ```{r example6, echo=F}
 y <- s[1]
 z <- s[15:16]
@@ -118,6 +143,9 @@ write(c(y,z_1), "./geom_jitter/example6.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_6")
+```
 
 ```{r example7, echo=F}
 y <- s[1]
@@ -133,4 +161,8 @@ write(c(y,z_1), "./geom_jitter/example7.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+plotly::api_create(plotly::ggplotly(p), filename = "geom_jitter_7")
 ```

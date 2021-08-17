@@ -1,6 +1,10 @@
 ---
 title: "geom_dotplot"
-output: html_document
+output: 
+  html_document:
+    keep_md: true
+    self_contained: true
+always_allow_html: true
 ---
 
 Creates dotplot and then convert them with ggplotly.
@@ -12,6 +16,7 @@ library(ggplot2)
 knitr::opts_chunk$set(
   class.output  = "bg-light"
 )
+source("D:/Personal/Upwork/Contract/rvest - Jack/ggplot_scrap/functions.R")
 ```
 
 ```{r, include=FALSE}
@@ -37,6 +42,10 @@ write(z_1, "./geom_dotplot/example1.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_1")
+```
+
 ```{r example2, echo=F}
 z <- s[4:5]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -50,6 +59,10 @@ write(z_1, "./geom_dotplot/example2.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_2")
 ```
 
 ```{r example3, echo=F}
@@ -67,6 +80,10 @@ write(z_1, "./geom_dotplot/example3.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_3")
+```
+
 ```{r example4, echo=F}
 z <- s[12:13]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -80,6 +97,10 @@ write(z_1, "./geom_dotplot/example4.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_4")
 ```
 
 ```{r example5, echo=F}
@@ -97,6 +118,10 @@ write(z_1, "./geom_dotplot/example5.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_5")
+```
+
 ```{r example6, echo=F}
 z <- s[19:20]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -110,6 +135,10 @@ write(z_1, "./geom_dotplot/example6.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_6")
 ```
 
 ```{r example7, echo=F}
@@ -127,6 +156,10 @@ write(z_1, "./geom_dotplot/example7.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_7")
+```
+
 ```{r example8, echo=F}
 z <- s[27:28]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -140,6 +173,10 @@ write(z_1, "./geom_dotplot/example8.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_8")
 ```
 
 ```{r example9, echo=F}
@@ -157,6 +194,10 @@ write(z_1, "./geom_dotplot/example9.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_9")
+```
+
 ```{r example10, echo=F}
 z <- s[36:37]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -170,6 +211,10 @@ write(z_1, "./geom_dotplot/example10.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_10")
 ```
 
 ```{r example11, echo=F}
@@ -187,6 +232,10 @@ write(z_1, "./geom_dotplot/example11.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_11")
+```
+
 ```{r example12, echo=F}
 z <- s[42:43]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -200,6 +249,10 @@ write(z_1, "./geom_dotplot/example12.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_12")
 ```
 
 ```{r example13, echo=F}
@@ -217,6 +270,10 @@ write(z_1, "./geom_dotplot/example13.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_13")
+```
+
 ```{r example14, echo=F}
 z <- s[49:50]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -230,6 +287,10 @@ write(z_1, "./geom_dotplot/example14.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_14")
 ```
 
 ```{r example15, echo=F}
@@ -247,6 +308,10 @@ write(z_1, "./geom_dotplot/example15.R")
 plotly::ggplotly(p)
 ```
 
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_15")
+```
+
 ```{r example16, echo=F}
 z <- s[56:57]
 z_1 <- paste("p <- ", "  \n", paste(z, collapse = '\n'))
@@ -260,6 +325,10 @@ write(z_1, "./geom_dotplot/example16.R")
 
 ```{r}
 plotly::ggplotly(p)
+```
+
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_16")
 ```
 
 ```{r example17, echo=F}
@@ -277,4 +346,6 @@ write(z_1, "./geom_dotplot/example17.R")
 plotly::ggplotly(p)
 ```
 
-
+```{r include=F, error=T}
+# plotly::api_create(plotly::ggplotly(p), filename = "geom_dotplot_17")
+```
