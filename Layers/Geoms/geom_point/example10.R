@@ -1,4 +1,5 @@
-mtcars2 <- transform(mtcars, mpg = ifelse(runif(32) < 0.2, NA, mpg))
+p <- ggplot(mtcars, aes(mpg, wt, shape = factor(cyl)))
 p <-    
- ggplot(mtcars2, aes(wt, mpg)) +
-  geom_point(na.rm = TRUE)
+ p +
+  geom_point(aes(colour = factor(cyl)), size = 4) +
+  geom_point(colour = "grey90", size = 1.5)
